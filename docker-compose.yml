@@ -1,0 +1,11 @@
+services:
+  ovh-dyndns:
+    build: .
+    container_name: ovh-dyndns
+    env_file:
+      - .env
+    # One-shot behaviour: the container runs the check once on start and exits.
+    # `restart: "no"` prevents Docker from re-running it automatically.
+    # To re-run it, simply `docker compose up` again (e.g. from a host cron job),
+    # or switch to loop mode by setting RUN_INTERVAL in the .env file.
+    restart: "no"
