@@ -43,53 +43,8 @@ OVH n'utilise pas une simple « clé API » : il faut **trois** tokens.
 ## 3. Récupérer le projet
 
 ```bash
-git clone https://github.com/# Guide de déploiement et d'utilisation — Mise à jour DNS dynamique OVH
-
-> 🇬🇧 English version : [`DEPLOYMENT.en.md`](./DEPLOYMENT.en.md)
-
-## 1. Prérequis
-
-- Un hôte disposant de **Docker Engine** et du plugin **Docker Compose**.
-- Un **compte OVH** gérant la zone DNS à mettre à jour.
-- La **zone DNS** déjà créée chez OVH (ex. `mondomaine.fr`).
-
-Vérifiez votre outillage :
-
-```bash
-docker --version
-docker compose version
-```
-
-## 2. Générer vos identifiants API OVH
-
-OVH n'utilise pas une simple « clé API » : il faut **trois** tokens.
-
-1. Ouvrez la page de création de token :
-   **https://www.ovh.com/auth/api/createToken**
-2. Connectez-vous avec votre compte OVH.
-3. Renseignez le formulaire :
-   - **Nom / description de l'application :** ex. `ovh-dyndns`.
-   - **Validité :** `Illimitée` (ou une durée conforme à votre politique).
-   - **Droits :** ajoutez les trois lignes suivantes (remplacez `mondomaine.fr`
-     par votre zone) :
-
-     | Méthode | Chemin |
-     |---|---|
-     | `GET`  | `/domain/zone/mondomaine.fr/*` |
-     | `PUT`  | `/domain/zone/mondomaine.fr/*` |
-     | `POST` | `/domain/zone/mondomaine.fr/*` |
-4. Cliquez sur **Créer les clés**. OVH affiche trois valeurs **une seule fois** :
-   - **Application Key** (clé d'application)
-   - **Application Secret** (secret d'application)
-   - **Consumer Key** (clé consommateur)
-
-   Copiez-les immédiatement.
-
-## 3. Récupérer le projet
-
-```bash
-git clone https://github.com/avl12ng/ovh-dyndns.git
-cd ovh-dyndns
+git clone https://github.com/avl12ng/ovh_dyndns_docker.git
+cd ovh_dyndns_docker
 ```
 
 ## 4. Configurer le service
