@@ -43,8 +43,8 @@ OVH does not use a single "API key" — it uses **three** tokens.
 ## 3. Get the project
 
 ```bash
-git clone https://github.com/avl12ng/ovh_dyndns.git
-cd ovh_dyndns
+git clone https://github.com/avl12ng/ovh_dyndns_docker.git
+cd ovh_dyndns_docker
 ```
 
 ## 4. Configure the service
